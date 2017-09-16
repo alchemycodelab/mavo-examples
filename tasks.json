@@ -2,6 +2,14 @@
 	"task": [
 		{
 			"done": false,
+			"name": "This task"
+		},
+		{
+			"done": false,
+			"name": "Some new task"
+		},
+		{
+			"done": false,
 			"name": "My First Task"
 		}
 	]
