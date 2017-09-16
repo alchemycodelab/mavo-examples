@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mavo Application Examples</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://get.mavo.io/mavo.js"></script>
+    <title>Tasks</title>
 </head>
-<body>
-    <ul>
-        <li><a href="/tasks">Task List</a></li>
-        <li><a href="/gallery">Image Gallery</a></li>
-        <li><a href="/posts">Social Posts</a></li>
-    </ul>
+<body mv-app="tasks" mv-storage="https://github.com/alchemycodelab/mavo-examples">
+    <header>
+        <h1>What needs to get done today?</h1>
+        <p class="remaining">
+            <strong>[count(done)]</strong>
+            of <strong>[count(task)]</strong>
+            tasks complete
+        </p>
+    </header>
+    <main>
+        <ul>
+            <li property="task" mv-multiple>
+                <input type="checkbox" property="done">
+                <span class="[if(done, 'done')]" property="name"></span>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        &copy; 2017 Get-It-Done Company
+    </footer>
 </body>
 </html>
